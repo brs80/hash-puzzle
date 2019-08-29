@@ -5,23 +5,25 @@ class Program
     public static void Main(String[] args)
     {
 
-
         string[] values = new string[1000];
 
-        string key = "acegikoprs";
+        string letters = "acegikoprs";
+        string key = "acegiko"; // the first seven letters
 
-        int hashCode;
-
-        hashCode = HashFunction(key, values);
-
-        Console.WriteLine(hashCode);
+        long hashCode = 0;
+        while (hashCode != 675217408078)
+        {
+            hashCode = HashFunction(key, values);
+            
+            Console.WriteLine(hashCode);
+        }
 
     }
 
     // Defining the hash function 
-    static int HashFunction(string s, string[] array)
+    static long HashFunction(string s, string[] array)
     {
-        int total = 7;
+        int total = 12;
         char[] c;
         c = s.ToCharArray();
 
@@ -33,13 +35,13 @@ class Program
         return total;
     }
 
-    private static int IndexOf(string s, char v)
+    private static char IndexOf(string s, char v)
     {
         for (int i = 0; i < s.Length; i++)
         {
             if (s[i] == v)
-                return i;
+                return s[i];
         }
-        return 999; // if not found return last index 
+        return s[1]; // if not found return last index 
     }
 }

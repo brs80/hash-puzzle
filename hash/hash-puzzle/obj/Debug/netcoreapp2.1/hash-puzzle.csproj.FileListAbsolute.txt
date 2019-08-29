@@ -1,0 +1,11 @@
+C:\Users\profe\source\repos\hash-puzzle\hash\hash-puzzle\bin\Debug\netcoreapp2.1\hash-puzzle.deps.json
+C:\Users\profe\source\repos\hash-puzzle\hash\hash-puzzle\bin\Debug\netcoreapp2.1\hash-puzzle.runtimeconfig.json
+C:\Users\profe\source\repos\hash-puzzle\hash\hash-puzzle\bin\Debug\netcoreapp2.1\hash-puzzle.runtimeconfig.dev.json
+C:\Users\profe\source\repos\hash-puzzle\hash\hash-puzzle\bin\Debug\netcoreapp2.1\hash-puzzle.dll
+C:\Users\profe\source\repos\hash-puzzle\hash\hash-puzzle\bin\Debug\netcoreapp2.1\hash-puzzle.pdb
+C:\Users\profe\source\repos\hash-puzzle\hash\hash-puzzle\obj\Debug\netcoreapp2.1\hash-puzzle.csprojAssemblyReference.cache
+C:\Users\profe\source\repos\hash-puzzle\hash\hash-puzzle\obj\Debug\netcoreapp2.1\hash-puzzle.csproj.CoreCompileInputs.cache
+C:\Users\profe\source\repos\hash-puzzle\hash\hash-puzzle\obj\Debug\netcoreapp2.1\hash-puzzle.AssemblyInfoInputs.cache
+C:\Users\profe\source\repos\hash-puzzle\hash\hash-puzzle\obj\Debug\netcoreapp2.1\hash-puzzle.AssemblyInfo.cs
+C:\Users\profe\source\repos\hash-puzzle\hash\hash-puzzle\obj\Debug\netcoreapp2.1\hash-puzzle.dll
+C:\Users\profe\source\repos\hash-puzzle\hash\hash-puzzle\obj\Debug\netcoreapp2.1\hash-puzzle.pdb
