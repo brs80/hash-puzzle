@@ -1,0 +1,6 @@
+C:\Users\profe\source\repos\WebApplication1\brs80\hash-puzzle\bin\Debug\ConsoleApplication.exe
+C:\Users\profe\source\repos\WebApplication1\brs80\hash-puzzle\bin\Debug\ConsoleApplication.pdb
+C:\Users\profe\source\repos\WebApplication1\brs80\hash-puzzle\obj\x86\Debug\hashing.csprojAssemblyReference.cache
+C:\Users\profe\source\repos\WebApplication1\brs80\hash-puzzle\obj\x86\Debug\hashing.csproj.CoreCompileInputs.cache
+C:\Users\profe\source\repos\WebApplication1\brs80\hash-puzzle\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\profe\source\repos\WebApplication1\brs80\hash-puzzle\obj\x86\Debug\ConsoleApplication.pdb

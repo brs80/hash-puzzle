@@ -1,0 +1,159 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{725D3E39-5CFB-4FD0-9F91-4E7069074F8F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>hashing</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="hash\hash-puzzle\bin\Debug\netcoreapp2.1\hash-puzzle.dll" />
+    <Content Include="hash\hash-puzzle\bin\Debug\netcoreapp2.1\hash-puzzle.pdb" />
+    <Content Include="hash\hash-puzzle\obj\Debug\netcoreapp2.1\hash-puzzle.csproj.FileListAbsolute.txt" />
+    <Content Include="hash\hash-puzzle\obj\Debug\netcoreapp2.1\hash-puzzle.dll" />
+    <Content Include="hash\hash-puzzle\obj\Debug\netcoreapp2.1\hash-puzzle.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\objects\01\21b1f9220467aa3b5259015bb517bab59f95d5" />
+    <None Include=".git\objects\04\da22ff4f64cae57bb390c3b218a92c45d3a6f7" />
+    <None Include=".git\objects\05\f070a54de5dd9cca573fde1b0daf64c5e25970" />
+    <None Include=".git\objects\09\d0f76f382090d69ae5dac8352b7ca882bdfd44" />
+    <None Include=".git\objects\0d\cda7a37376577fd462d323922b543c5da69c8a" />
+    <None Include=".git\objects\19\029ebd0b2616666a247c97d67aa42845327ffa" />
+    <None Include=".git\objects\20\95a594d95ed0bba96b0aea28e2730e850fc513" />
+    <None Include=".git\objects\25\4005da397d4d9aaf8a7381e961bcdb7ad36a00" />
+    <None Include=".git\objects\2e\991b51da59599b2816c76247015f2f2ef485e3" />
+    <None Include=".git\objects\2f\4ce83373ac14d948f270ad5cf3fb10e3906ce2" />
+    <None Include=".git\objects\35\ba45b51dff6113578c1cd0688fa4cc631565ad" />
+    <None Include=".git\objects\36\ff54d04e076cc9324eb07855541eec5134c593" />
+    <None Include=".git\objects\3d\5a407ef7e3752517afbfeb51613bb2f79655ab" />
+    <None Include=".git\objects\3e\f8ba3074d4f84bb116b7b239cdb2be875e7f94" />
+    <None Include=".git\objects\4d\123efb18da1619043bee586293f4a69e550415" />
+    <None Include=".git\objects\56\9a1b8c2f9171791dfcd8631148390f1776f16f" />
+    <None Include=".git\objects\6c\b770d4288116051b88b6696cffc3f81292d51f" />
+    <None Include=".git\objects\6e\9ce750854b03e1239b07fa2672aa31954f3d8b" />
+    <None Include=".git\objects\6e\c71155649489394048d69e42eff86df4e1ad50" />
+    <None Include=".git\objects\6e\d29a0915dc631faa689d4e84903388a011f786" />
+    <None Include=".git\objects\70\b5606a8f31427833c71a83f2683be554fae724" />
+    <None Include=".git\objects\74\51e0fb0030c71a3e5903003818b723a8edbb5c" />
+    <None Include=".git\objects\79\949366e798fb23a1349ac8cd3263620be89f8d" />
+    <None Include=".git\objects\7a\7314c2f0c036319246a2f2ef7043dcf105e40c" />
+    <None Include=".git\objects\7c\b8f4eb7f94fd26aa44bacc24e4fdeaf662b0aa" />
+    <None Include=".git\objects\80\f1e16f0ec18a198f7539f04ed31f78860e2075" />
+    <None Include=".git\objects\85\1e3b01e1d38d5165eb5a04fa0ef2fc22a96e3c" />
+    <None Include=".git\objects\86\dae02cc6f3acd87219ec26346958e4155bb133" />
+    <None Include=".git\objects\87\ea39c12d3b68301db4e6a30826c69347152b59" />
+    <None Include=".git\objects\8c\004426fb4dc2f2b2a0f51f9f1b1818d5e4af28" />
+    <None Include=".git\objects\a2\203fcea2536ac4f6a0d9a0c9830abaf8129670" />
+    <None Include=".git\objects\a6\401b7c38d48cc46cbdb6da0bd6762f4caa4f1d" />
+    <None Include=".git\objects\ac\ce1ccf1bdb35ffce83f5ae2fabeb1189fd41d7" />
+    <None Include=".git\objects\ad\3600f56c7dfc14fd5e2dd4523dc550b8af66b2" />
+    <None Include=".git\objects\ad\9e2fbf1d118caf00d60c873b98b98bbeb71554" />
+    <None Include=".git\objects\ae\6a64736b36b7fae8e77d2da87dd0620d507032" />
+    <None Include=".git\objects\b1\ee83a177d67a3c803ee99f1a80cfab20453bd7" />
+    <None Include=".git\objects\b4\952100c06c3e6d1b97c2ab9aa95500214bd992" />
+    <None Include=".git\objects\b7\43cbe74a72bfb89a97e8b62e9e1e4d2438b65a" />
+    <None Include=".git\objects\c3\b2125d5a56e700d8d0074cabc7d412919e061e" />
+    <None Include=".git\objects\c4\d20086e4b40a0ae8ffeb9175d1893c6190c922" />
+    <None Include=".git\objects\cd\8c403bc9490ab7726c98dda5d84842860e02b0" />
+    <None Include=".git\objects\d8\db56b7810b9c12768e6991cab78aa2923ae431" />
+    <None Include=".git\objects\dd\8b4da98196a6a06f81b444d22fcc0ad2b951cd" />
+    <None Include=".git\objects\f0\54f2fa7e9d431b752dec16d006dd04c327fd70" />
+    <None Include=".git\objects\f5\de89f48e8b81502ddb5e78a40101feb934cc12" />
+    <None Include=".git\objects\f7\8c9a0681dc3351fe7fba7cd521b2f849ca27f4" />
+    <None Include=".git\objects\f8\86f1cf8a4865bc828b9b614a15705f0d56511b" />
+    <None Include=".git\objects\f9\b020691f6c0d8922257266a001617d91632dfc" />
+    <None Include=".git\objects\fa\16892458cb0f0bbf512bb4d20433881472c79c" />
+    <None Include=".git\objects\fb\e4211148aefe08af2c67d1b413336f028da78d" />
+    <None Include=".git\objects\fc\80d3429e6a2c537e490b0b8c15b912a0460e94" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".vs\hash-puzzle\v16\.suo" />
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="hash\hash-puzzle\bin\Debug\netcoreapp2.1\hash-puzzle.deps.json" />
+    <None Include="hash\hash-puzzle\bin\Debug\netcoreapp2.1\hash-puzzle.runtimeconfig.dev.json" />
+    <None Include="hash\hash-puzzle\bin\Debug\netcoreapp2.1\hash-puzzle.runtimeconfig.json" />
+    <None Include="hash\hash-puzzle\obj\Debug\netcoreapp2.1\hash-puzzle.AssemblyInfoInputs.cache" />
+    <None Include="hash\hash-puzzle\obj\Debug\netcoreapp2.1\hash-puzzle.assets.cache" />
+    <None Include="hash\hash-puzzle\obj\Debug\netcoreapp2.1\hash-puzzle.csproj.CoreCompileInputs.cache" />
+    <None Include="hash\hash-puzzle\obj\Debug\netcoreapp2.1\hash-puzzle.csprojAssemblyReference.cache" />
+    <None Include="hash\hash-puzzle\obj\hash-puzzle.csproj.nuget.cache" />
+    <None Include="hash\hash-puzzle\obj\hash-puzzle.csproj.nuget.dgspec.json" />
+    <None Include="hash\hash-puzzle\obj\hash-puzzle.csproj.nuget.g.props" />
+    <None Include="hash\hash-puzzle\obj\hash-puzzle.csproj.nuget.g.targets" />
+    <None Include="hash\hash-puzzle\obj\project.assets.json" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="hash\hash-puzzle\obj\Debug\netcoreapp2.1\hash-puzzle.AssemblyInfo.cs" />
+    <Compile Include="hash\hash-puzzle\Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\objects\pack\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include=".vs\hashing\v16\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

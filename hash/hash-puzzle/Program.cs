@@ -6,22 +6,25 @@ class Program
     {
 
         string[] values = new string[1000];
-
-        string letters = "acegikoprs";
-        string key = "acegiko"; // the first seven letters
+        string key = RandomString(7); // the first seven letters
 
         ulong hashCode = 0;
         while (hashCode != 675217408078)
         {
-            hashCode = HashFunction(key, values);
             key = RandomString(7);
+            hashCode = HashFunction(key, values);
             Console.WriteLine(hashCode);
         }
+        if(hashCode == 675217408078)
+        {
+            Console.WriteLine(key);
+        }
     }
-    private static Random random = new Random();
+    private static Random random = new Random(DateTime.Now.Millisecond);
     public static string RandomString(int length)
     {
         const string chars = "acegikoprs";
+        random = new Random(DateTime.Now.Millisecond);
         return new string(Enumerable.Repeat(chars, length)
           .Select(s => s[random.Next(s.Length)]).ToArray());
     }
@@ -35,19 +38,18 @@ class Program
 
         for (int k = 0; k <= c.GetUpperBound(0); k++)
         {
-            total = (total * 37 + IndexOf(s, c[k]));
+                total = (total * (ulong) 37 + (ulong) IndexOf(s, c[k]));
         }
-
         return total;
     }
 
-    private static char IndexOf(string s, char v)
+    private static int IndexOf(string s, char v)
     {
-        for (int i = 0; i < s.Length; i++)
+        for (int i = 1; i < s.Length; i++)
         {
             if (s[i] == v)
-                return s[i];
+                return i+1;
         }
-        return s[s.Length]; // if not found return last index 
+        return 0; // if not found return first index
     }
 }
