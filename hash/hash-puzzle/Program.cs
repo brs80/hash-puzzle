@@ -1,33 +1,28 @@
 ﻿using System;
 using System.Linq;
+using System.Security.Cryptography;
 class Program
 {
     public static void Main(String[] args)
     {
 
         string[] values = new string[1000];
-        string key = RandomString(7); // the first seven letters
+        string key = RandomString(7, "acegikoprs"); // the first seven letters
 
         ulong hashCode = 0;
         while (hashCode != 675217408078)
         {
-            key = RandomString(7);
+            key = RandomString(7, "acegikoprs");
             hashCode = HashFunction(key, values);
             Console.WriteLine(hashCode);
+            Console.WriteLine(key);
         }
         if(hashCode == 675217408078)
         {
             Console.WriteLine(key);
         }
     }
-    private static Random random = new Random(DateTime.Now.Millisecond);
-    public static string RandomString(int length)
-    {
-        const string chars = "acegikoprs";
-        random = new Random(DateTime.Now.Millisecond);
-        return new string(Enumerable.Repeat(chars, length)
-          .Select(s => s[random.Next(s.Length)]).ToArray());
-    }
+   
 
     // Defining the hash function 
     static ulong HashFunction(string s, string[] array)
@@ -52,4 +47,29 @@ class Program
         }
         return 0; // if not found return first index
     }
+
+    private static string RandomString(int length, string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
+    {       
+        var outOfRange = byte.MaxValue + 1 - (byte.MaxValue + 1) % alphabet.Length;
+
+        return string.Concat(
+            Enumerable
+                .Repeat(0, int.MaxValue)
+                .Select(e => RandomByte())
+                .Where(randomByte => randomByte < outOfRange)
+                .Take(length)
+                .Select(randomByte => alphabet[randomByte % alphabet.Length])
+        );
+    }
+
+    static byte RandomByte()
+    {
+        using (var randomizationProvider = new RNGCryptoServiceProvider())
+        {
+            var randomBytes = new byte[1];
+            randomizationProvider.GetBytes(randomBytes);
+            return randomBytes.Single();
+        }   
+    }
+
 }
