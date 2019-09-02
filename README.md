@@ -29,9 +29,9 @@ Also there are 4,782,969 (9^7) possible strings with the given set.
 using the performance equation it would **roughly** take
                         
 
-             Seconds per program = (instructions per string * possible strings) 
-                                   (~100 * 4782969) * 1  * (1/3600000)
+        Seconds per program = (instructions per string * possible strings)  *  cycles per instruction             cycles per second
+                              (~100 * 4782969)        *                         ~ 2                         *    (1/3600000)
             
-
-So it will take well over a few minutes to run
-The answer could also be wrong causing the loop to exit with the first matching string
+          
+So it will take a long time to run
+The output could also not be the correct string
