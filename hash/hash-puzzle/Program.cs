@@ -10,7 +10,7 @@ class Program
         string key = RandomString(7, "acegikoprs"); // the first seven letters
 
         ulong hashCode = 0;
-        while (hashCode != 675217408078)
+        while (hashCode != (ulong) 675217408078)
         {
             key = RandomString(7, "acegikoprs");
             hashCode = HashFunction(key, values);
