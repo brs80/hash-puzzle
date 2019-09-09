@@ -1,39 +1,38 @@
 ﻿using System;
 using System.Linq;
 using System.Security.Cryptography;
+
 class Program
 {
     public static void Main(String[] args)
     {
+        string key = RandomString(7, "acegikoprs"); // randomly guessed string
+        long hashCode = 0;
 
-        string[] values = new string[1000];
-        string key = RandomString(7, "acegikoprs"); // the first seven letters
-
-        ulong hashCode = 0;
-        while (hashCode != 675217408078)
+        while (hashCode != Convert.ToInt64(675217408078)) 
         {
-            key = RandomString(7, "acegikoprs");
-            hashCode = HashFunction(key, values);
+            key = RandomString(7, "acegikoprs"); // get a random string for guessing 
+            hashCode = HashFunction(key); // replicate the hashcode for this
             Console.WriteLine(hashCode);
             Console.WriteLine(key);
         }
-        if(hashCode == 675217408078)
+        // we found a string that matches
+        if(hashCode == Convert.ToInt64(675217408078))
         {
-            Console.WriteLine(key);
+            Console.WriteLine(key); // print out the string that matches the hashcode
         }
     }
    
 
     // Defining the hash function 
-    static ulong HashFunction(string s, string[] array)
+    static long HashFunction(string s)
     {
-        ulong total = 7;
-        char[] c;
-        c = s.ToCharArray();
-
+        long total = 7;
+        char[] c = s.ToCharArray();
+        string letters = "acegikoprs";
         for (int k = 0; k <= c.GetUpperBound(0); k++)
         {
-                total = (total * (ulong) 37 + (ulong) IndexOf(s, c[k]));
+                total = (total * Convert.ToInt64(37) + Convert.ToInt64(IndexOf(letters, c[k])));
         }
         return total;
     }
@@ -45,10 +44,10 @@ class Program
             if (s[i] == v)
                 return i+1;
         }
-        return 0; // if not found return first index
+        return -1; // if not found return first index
     }
 
-    private static string RandomString(int length, string alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
+    private static string RandomString(int length, string alphabet = "acegikoprs")
     {       
         var outOfRange = byte.MaxValue + 1 - (byte.MaxValue + 1) % alphabet.Length;
 
