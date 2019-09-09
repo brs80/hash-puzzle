@@ -22,9 +22,9 @@
       }
 
 
-# why it doesn't work
-Many strings can hash to the same hashcode.
-Also there are 4,782,969 (9^7) possible strings with the given set. 
+
+
+there are 4,782,969 (9^7) possible strings with the given set. 
 using the performance equation it would **roughly** take
                         
 
