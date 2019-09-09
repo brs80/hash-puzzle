@@ -1,6 +1,5 @@
 # hash-puzzle
-Should be noted this program doesn't hold real usage.
-It was a best shot at trying to solve: 
+
 
       Find a 7 letter string of characters that contains only letters from
 
